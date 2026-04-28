@@ -1,0 +1,26 @@
+name: "Nightshift: Code Reviewer"
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  id-token: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Read and follow the agent instructions in .github/nightshift/agents/code-reviewer.md
+
+            Repository: ${{ github.repository }}
+            PR Number: ${{ github.event.pull_request.number }}

@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "nightshift": {
+      "source": { "source": "github", "repo": "klefix/nightshift" }
+    }
+  },
+  "enabledPlugins": {
+    "nightshift@nightshift": true
+  }
+}
