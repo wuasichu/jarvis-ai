@@ -1,0 +1,9 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.wav
+log.txt
+backend_log.txt
+backend_err.txt
+node_modules/

@@ -1,0 +1,53 @@
+.chat-log {
+  width: 100%;
+  max-width: 520px;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 2px 4px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
+.msg {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 85%;
+}
+
+.msg--user {
+  align-self: flex-end;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #bfdbfe;
+}
+
+.msg--jarvis {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(210, 225, 255, 0.9);
+}
+
+.clear-btn {
+  align-self: center;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(160, 185, 255, 0.4);
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.clear-btn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(160, 185, 255, 0.7);
+}
